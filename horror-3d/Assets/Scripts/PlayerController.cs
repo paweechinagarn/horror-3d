@@ -18,7 +18,9 @@ namespace Horror3d
 
         private void FixedUpdate()
         {
-            var direction = new Vector3(moveInput.x, 0f, moveInput.y);
+            var cameraTransform = Camera.main.transform;
+            var direction = cameraTransform.forward * moveInput.y + cameraTransform.right * moveInput.x;
+            direction.y = 0f;
             characterController.Move(moveSpeed * Time.fixedDeltaTime * direction);
         }
 
