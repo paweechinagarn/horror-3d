@@ -5,7 +5,7 @@ using UnityEngine.InputSystem.Interactions;
 namespace Horror3D
 {
     [RequireComponent(typeof(CharacterController))]
-    public class PlayerMovement3D : MonoBehaviour
+    public class CharacterMovement3D : MonoBehaviour
     {
         [SerializeField] private CharacterController characterController;
         [SerializeField] private float walkSpeed = 5f;
