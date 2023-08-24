@@ -1,10 +1,10 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Horror3d
+namespace Horror3D
 {
     [RequireComponent(typeof(CharacterController))]
-    public class PlayerController : MonoBehaviour
+    public class PlayerMovement3D : MonoBehaviour
     {
         [SerializeField] private CharacterController characterController;
         [SerializeField] private float moveSpeed = 10f;
