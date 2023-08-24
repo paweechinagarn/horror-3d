@@ -214,7 +214,7 @@ Transform:
   m_GameObject: {fileID: 58116142}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.5, y: 1.51, z: -2.72}
-  m_LocalScale: {x: 1, y: 1, z: 10}
+  m_LocalScale: {x: 4, y: 1, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1649,6 +1649,7 @@ GameObject:
   - component: {fileID: 1442608354}
   - component: {fileID: 1442608356}
   - component: {fileID: 1442608357}
+  - component: {fileID: 1442608359}
   - component: {fileID: 1442608358}
   m_Layer: 6
   m_Name: CharacterController
@@ -1783,8 +1784,8 @@ MonoBehaviour:
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1442608357}
-        m_TargetAssemblyTypeName: Horror3D.PlayerMovement3D, Assembly-CSharp
+      - m_Target: {fileID: 1442608359}
+        m_TargetAssemblyTypeName: Horror3D.CharacterRun, Assembly-CSharp
         m_MethodName: OnRun
         m_Mode: 0
         m_Arguments:
@@ -1832,8 +1833,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterController: {fileID: 1442608354}
   walkSpeed: 5
-  runSpeed: 10
-  turnSpeed: 20
+  turnSpeed: 10
+  <MoveSpeed>k__BackingField: 0
 --- !u!114 &1442608358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1847,11 +1848,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterController: {fileID: 1442608354}
+  characterMovement: {fileID: 1442608357}
+  crouchSpeed: 2
   crouchingHeight: 1
   standingHeight: 2
   obstacleLayerMask:
     serializedVersion: 2
     m_Bits: 128
+--- !u!114 &1442608359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442608353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efe99f5df594d894dab2fa348f503aeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterMovement: {fileID: 1442608357}
+  runSpeed: 10
 --- !u!1 &1478713441
 GameObject:
   m_ObjectHideFlags: 3

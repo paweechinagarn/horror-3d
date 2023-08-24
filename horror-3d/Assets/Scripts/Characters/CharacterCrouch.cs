@@ -15,6 +15,8 @@ namespace Horror3D
         }
 
         [SerializeField] private CharacterController characterController;
+        [SerializeField] private CharacterMovement3D characterMovement;
+        [SerializeField] private float crouchSpeed;
         [SerializeField] private float crouchingHeight;
         [SerializeField] private float standingHeight;
         [SerializeField] private LayerMask obstacleLayerMask;
@@ -45,7 +47,6 @@ namespace Horror3D
             if (context.interaction is not HoldInteraction)
                 return;
 
-            Debug.Log($"hold c {context.phase}");
             switch (context.phase)
             {
                 case InputActionPhase.Performed:
@@ -62,12 +63,14 @@ namespace Horror3D
             state = CrouchingState.Crouch;
             characterController.height = crouchingHeight;
             characterController.center = new Vector3(characterController.center.x, crouchingHeight * 0.5f, characterController.center.z);
+            characterMovement.MoveSpeed = crouchSpeed;
         }
 
         private void Stand()
         {
             characterController.height = standingHeight;
             characterController.center = new Vector3(characterController.center.x, standingHeight * 0.5f, characterController.center.z);
+            characterMovement.ResetSpeed();
             state = CrouchingState.Stand;
         }
     }

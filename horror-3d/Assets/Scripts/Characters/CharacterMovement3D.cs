@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.Interactions;
 
 namespace Horror3D
 {
@@ -9,15 +8,16 @@ namespace Horror3D
     {
         [SerializeField] private CharacterController characterController;
         [SerializeField] private float walkSpeed = 5f;
-        [SerializeField] private float runSpeed = 10f;
         [SerializeField] private float turnSpeed = 10f;
 
+        [field: SerializeField] public float MoveSpeed { get; set; }
+
         private Vector2 moveInput;
-        private bool isRunning;
 
         private void Awake()
         {
             characterController = GetComponent<CharacterController>();
+            MoveSpeed = walkSpeed;
         }
 
         private void FixedUpdate()
@@ -29,7 +29,7 @@ namespace Horror3D
             direction.y = 0f;
 
             // Move with walk speed or run speed
-            characterController.Move((isRunning ? runSpeed : walkSpeed) * Time.fixedDeltaTime * direction);
+            characterController.Move(MoveSpeed * Time.fixedDeltaTime * direction);
 
             // Looking towards move direction
             if (direction != Vector3.zero)
@@ -44,22 +44,9 @@ namespace Horror3D
             moveInput = context.ReadValue<Vector2>();
         }
 
-        public void OnRun(InputAction.CallbackContext context)
+        public void ResetSpeed()
         {
-            if (context.interaction is not HoldInteraction)
-                return;
-
-            Debug.Log($"hold shift {context.phase}");
-            switch (context.phase)
-            {
-                case InputActionPhase.Performed:
-                    isRunning = true;
-                    break;
-                case InputActionPhase.Canceled:
-                    isRunning = false;
-                    break;
-            }
-            Debug.Log($"isRunning = {isRunning}");
+            MoveSpeed = walkSpeed;
         }
     }
 }
