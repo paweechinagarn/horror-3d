@@ -12,6 +12,11 @@ namespace Horror3D
         public Transform Eye;
         public Transform Target;
 
+        private void Start()
+        {
+            agent.isStopped = true;
+        }
+
         private void Update()
         {
             if (Target == null)
@@ -33,13 +38,18 @@ namespace Horror3D
             if (Target == null)
                 return;
 
+            if (agent.isStopped)
+                Debug.Log($"{name} is following!");
+
             agent.isStopped = false;
             agent.SetDestination(Target.position);
-            Debug.Log($"{name} is following!");
         }
 
         public void Unfollow()
         {
+            if (!agent.isStopped)
+                Debug.Log($"{name} is stop following!");
+
             agent.isStopped = true;
         }
     }
