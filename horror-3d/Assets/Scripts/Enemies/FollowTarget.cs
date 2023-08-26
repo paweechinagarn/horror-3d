@@ -38,6 +38,9 @@ namespace Horror3D
             if (Target == null)
                 return;
 
+            if (!agent.enabled)
+                return;
+
             if (agent.isStopped)
                 Debug.Log($"{name} is following!");
 
@@ -47,6 +50,9 @@ namespace Horror3D
 
         public void Unfollow()
         {
+            if (!agent.enabled)
+                return;
+
             if (!agent.isStopped)
                 Debug.Log($"{name} is stop following!");
 

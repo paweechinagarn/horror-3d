@@ -209,6 +209,7 @@ GameObject:
   - component: {fileID: 6592068258405488757}
   - component: {fileID: 6592068258405488760}
   - component: {fileID: 6592068258405488767}
+  - component: {fileID: 5948315527522463324}
   m_Layer: 0
   m_Name: Enemy_Active
   m_TagString: Untagged
@@ -258,10 +259,10 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Constraints: 4
+  m_CollisionDetection: 2
 --- !u!195 &6592068258405488756
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -412,6 +413,69 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   source: {fileID: 6592068258405488760}
   agent: {fileID: 6592068258405488756}
+--- !u!114 &5948315527522463324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6592068258405488758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ea59a5440e34584b8652f27d3a1391b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnCollidedWithPlayer:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6592068258405488757}
+        m_TargetAssemblyTypeName: Horror3D.FollowTarget, Assembly-CSharp
+        m_MethodName: Unfollow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5948315527522463324}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6592068258405488756}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6592068258405488762}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6592068259775502319
 GameObject:
   m_ObjectHideFlags: 0

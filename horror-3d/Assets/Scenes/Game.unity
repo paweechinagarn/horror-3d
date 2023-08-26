@@ -467,7 +467,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 72279684}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.52, z: -9}
+  m_LocalPosition: {x: 0, y: 4.5, z: -9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1567,8 +1567,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_LocalRotation: {x: 0.17614672, y: 0.000000016937344, z: -0.0000000030308476, w: 0.984364}
-  m_LocalPosition: {x: 0, y: 4.5196147, z: -8.9}
+  m_LocalRotation: {x: 0.17614675, y: -0.000000029336336, z: 0.0000000052495825, w: 0.984364}
+  m_LocalPosition: {x: 0, y: 4.499615, z: -8.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1711,7 +1711,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 342790362}
-  m_LocalRotation: {x: 0.15326627, y: -1e-45, z: -0, w: 0.9881849}
+  m_LocalRotation: {x: 0.1532663, y: -0.000000029450206, z: 0.0000000045676916, w: 0.9881849}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2363,6 +2363,18 @@ MonoBehaviour:
   m_Area: 1
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
+--- !u!114 &476173109 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6592068258405488757, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
+    type: 3}
+  m_PrefabInstance: {fileID: 1322198109}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54db3c8e44234284d8295d1e17e53e98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &647316089
 GameObject:
   m_ObjectHideFlags: 0
@@ -3329,6 +3341,7 @@ Transform:
   m_Children:
   - {fileID: 1661400521}
   - {fileID: 1006652649}
+  - {fileID: 1875392598}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3762,7 +3775,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 476173109}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
         m_MethodName: set_enabled
         m_Mode: 6
@@ -4148,7 +4161,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1254996789}
-  m_LocalRotation: {x: 0.17614669, y: 0.000000008468674, z: -0.0000000015154242, w: 0.984364}
+  m_LocalRotation: {x: 0.1761467, y: -1e-45, z: -0, w: 0.9843639}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4278,6 +4291,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
+        type: 3}
+      propertyPath: OnCollidedWithPlayer.m_PersistentCalls.m_Calls.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
+        type: 3}
+      propertyPath: OnCollidedWithPlayer.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
+        type: 3}
+      propertyPath: OnCollidedWithPlayer.m_PersistentCalls.m_Calls.Array.data[4].m_Target
+      value: 
+      objectReference: {fileID: 1774981398}
+    - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
+        type: 3}
+      propertyPath: OnCollidedWithPlayer.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
+        type: 3}
+      propertyPath: OnCollidedWithPlayer.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
+      value: Lose
+      objectReference: {fileID: 0}
+    - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
+        type: 3}
+      propertyPath: OnCollidedWithPlayer.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
+      value: Horror3D.GameplayController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
+        type: 3}
+      propertyPath: OnCollidedWithPlayer.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6592068258405488757, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
         type: 3}
       propertyPath: Target
@@ -4551,7 +4599,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1442608353}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.02, z: -3}
+  m_LocalPosition: {x: 0, y: 0, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4763,11 +4811,11 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Constraints: 4
+  m_CollisionDetection: 2
 --- !u!114 &1442608362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4849,7 +4897,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1478713441}
-  m_LocalRotation: {x: 0.199031, y: -0.000000016862138, z: 0.0000000034246044, w: 0.9799932}
+  m_LocalRotation: {x: 0.19903103, y: 0.000000016862133, z: -0.0000000034246037, w: 0.9799932}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5330,7 +5378,133 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa1b28f029ba003459cd2b4be92742ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerInput: {fileID: 1442608356}
+  OnGameStarted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1442608356}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  OnGameEnded:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1442608356}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 179406374}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 476173109}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1 &1875392597
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1875392598}
+  - component: {fileID: 1875392600}
+  - component: {fileID: 1875392599}
+  m_Layer: 0
+  m_Name: Trigger (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1875392598
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875392597}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 15.5, y: 0.5, z: 15.5}
+  m_LocalScale: {x: 4, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 941003928}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1875392599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875392597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18dc664be9c401d439d4e9a49af51be8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnTriggerEntered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1774981398}
+        m_TargetAssemblyTypeName: Horror3D.GameplayController, Assembly-CSharp
+        m_MethodName: Win
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!65 &1875392600
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875392597}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1880243534
 GameObject:
   m_ObjectHideFlags: 0
@@ -5896,15 +6070,60 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
+        type: 3}
+      propertyPath: OnCollidedWithPlayer.m_PersistentCalls.m_Calls.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
+        type: 3}
+      propertyPath: OnCollidedWithPlayer.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
+        type: 3}
+      propertyPath: OnCollidedWithPlayer.m_PersistentCalls.m_Calls.Array.data[4].m_Target
+      value: 
+      objectReference: {fileID: 1774981398}
+    - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
+        type: 3}
+      propertyPath: OnCollidedWithPlayer.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
+        type: 3}
+      propertyPath: OnCollidedWithPlayer.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
+      value: Lose
+      objectReference: {fileID: 0}
+    - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
+        type: 3}
+      propertyPath: OnCollidedWithPlayer.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
+      value: Horror3D.GameplayController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
+        type: 3}
+      propertyPath: OnCollidedWithPlayer.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6592068258405488757, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
         type: 3}
       propertyPath: Target
       value: 
       objectReference: {fileID: 1442608355}
+    - target: {fileID: 6592068258405488757, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6592068258405488758, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
         type: 3}
       propertyPath: m_Name
       value: Enemy_Active
+      objectReference: {fileID: 0}
+    - target: {fileID: 6592068258405488760, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6592068258405488761, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
         type: 3}
@@ -5959,6 +6178,11 @@ PrefabInstance:
     - target: {fileID: 6592068258405488761, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6592068258405488763, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
+        type: 3}
+      propertyPath: m_AngularDrag
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
