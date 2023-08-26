@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
 
 namespace Horror3D
@@ -7,30 +6,41 @@ namespace Horror3D
     public class FollowTarget : MonoBehaviour
     {
         [SerializeField] private NavMeshAgent agent;
+        [SerializeField] private Renderer enemyRenderer;
+        [SerializeField] private float angleThreshold;
 
         public Transform Eye;
         public Transform Target;
 
-        private readonly RaycastHit[] hitResults = new RaycastHit[10];
-
         private void Update()
         {
-            var direction = Target.position - Eye.position;
-            direction.y = 0f;
-
-            Debug.DrawRay(Eye.position, direction);
-
-            var hits = Physics.RaycastNonAlloc(Eye.position, direction, hitResults);
-            if (hits == 0)
+            if (Target == null)
                 return;
 
-            var sortedHitResults = hitResults.Where(x => x.transform != null).OrderBy(x => x.distance);
-
-            var firstHitResult = sortedHitResults.First();
-            if (firstHitResult.transform == Target)
+            var angle = Vector3.Angle(transform.position - Target.position, Camera.main.transform.forward);
+            if (!enemyRenderer.isVisible || Mathf.Abs(angle) > angleThreshold)
             {
-                agent.SetDestination(Target.position);
+                Follow();
             }
+            else
+            {
+                Unfollow();
+            }
+        }
+
+        public void Follow()
+        {
+            if (Target == null)
+                return;
+
+            agent.isStopped = false;
+            agent.SetDestination(Target.position);
+            Debug.Log($"{name} is following!");
+        }
+
+        public void Unfollow()
+        {
+            agent.isStopped = true;
         }
     }
 }
