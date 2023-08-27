@@ -4983,6 +4983,9 @@ MonoBehaviour:
   obstacleLayerMask:
     serializedVersion: 2
     m_Bits: 128
+  followTarget: {fileID: 712632965}
+  crouchingFollowPosition: {x: 0, y: 1, z: 0}
+  standingFollowPosition: {x: 0, y: 2, z: 0}
 --- !u!114 &1442608359
 MonoBehaviour:
   m_ObjectHideFlags: 0

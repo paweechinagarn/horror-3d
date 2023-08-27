@@ -20,6 +20,9 @@ namespace Horror3D
         [SerializeField] private float crouchingHeight;
         [SerializeField] private float standingHeight;
         [SerializeField] private LayerMask obstacleLayerMask;
+        [SerializeField] private Transform followTarget;
+        [SerializeField] private Vector3 crouchingFollowPosition;
+        [SerializeField] private Vector3 standingFollowPosition;
 
         private CrouchingState state;
         private readonly RaycastHit[] checkHeadResult = new RaycastHit[1];
@@ -64,6 +67,8 @@ namespace Horror3D
             characterController.height = crouchingHeight;
             characterController.center = new Vector3(characterController.center.x, crouchingHeight * 0.5f, characterController.center.z);
             characterMovement.MoveSpeed = crouchSpeed;
+
+            followTarget.localPosition = crouchingFollowPosition;
         }
 
         private void Stand()
@@ -72,6 +77,8 @@ namespace Horror3D
             characterController.center = new Vector3(characterController.center.x, standingHeight * 0.5f, characterController.center.z);
             characterMovement.ResetSpeed();
             state = CrouchingState.Stand;
+
+            followTarget.localPosition = standingFollowPosition;
         }
     }
 }
