@@ -298,10 +298,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 6592068258405488756}
-  enemyRenderer: {fileID: 6592068259970436892}
   angleThreshold: 90
-  Eye: {fileID: 6592068259852004191}
-  Target: {fileID: 0}
+  eye: {fileID: 6592068259852004191}
+  target: {fileID: 0}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 640
 --- !u!82 &6592068258405488760
 AudioSource:
   m_ObjectHideFlags: 0
