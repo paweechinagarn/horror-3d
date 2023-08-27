@@ -11,13 +11,13 @@ namespace Horror3D
 
         private void Awake()
         {
-            resultText.gameObject.SetActive(false);
+            gameObject.SetActive(false);
         }
 
         public void SetResult(bool isWinning)
         {
             resultText.text = isWinning ? winText : loseText;
-            resultText.gameObject.SetActive(true);
+            gameObject.SetActive(true);
         }
     }
 }

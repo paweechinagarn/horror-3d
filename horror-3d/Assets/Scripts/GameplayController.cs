@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 namespace Horror3D
 {
@@ -12,6 +13,7 @@ namespace Horror3D
 
         private IEnumerator Start()
         {
+            Time.timeScale = 1f;
             yield return new WaitForSeconds(1f);
             Debug.Log($"Game starts");
             OnGameStarted?.Invoke();
@@ -29,6 +31,11 @@ namespace Horror3D
             Debug.Log($"You lose!");
             Time.timeScale = 0f;
             OnGameEnded?.Invoke(false);
+        }
+
+        public void Restart()
+        {
+            SceneManager.LoadScene(0);
         }
     }
 }
