@@ -4,10 +4,11 @@ using UnityEngine.Events;
 
 namespace Horror3D
 {
+
     public class GameplayController : MonoBehaviour
     {
         public UnityEvent OnGameStarted;
-        public UnityEvent OnGameEnded;
+        public UnityEvent<bool> OnGameEnded;
 
         private IEnumerator Start()
         {
@@ -19,19 +20,15 @@ namespace Horror3D
         public void Win()
         {
             Debug.Log($"You win!");
-            End();
+            Time.timeScale = 0f;
+            OnGameEnded?.Invoke(true);
         }
 
         public void Lose()
         {
             Debug.Log($"You lose!");
-            End();
-        }
-
-        private void End()
-        {
             Time.timeScale = 0f;
-            OnGameEnded?.Invoke();
+            OnGameEnded?.Invoke(false);
         }
     }
 }
