@@ -1711,8 +1711,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 342790362}
-  m_LocalRotation: {x: 0.15326631, y: 0.0000000147251065, z: -0.0000000022838464,
-    w: 0.9881849}
+  m_LocalRotation: {x: 0.1532663, y: -0.000000029450206, z: 0.0000000045676916, w: 0.9881849}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4295,7 +4294,17 @@ PrefabInstance:
     - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
         type: 3}
       propertyPath: OnCollidedWithPlayer.m_PersistentCalls.m_Calls.Array.size
-      value: 5
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
+        type: 3}
+      propertyPath: OnCollidedWithPlayer.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
+        type: 3}
+      propertyPath: OnCollidedWithPlayer.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
         type: 3}
@@ -4304,13 +4313,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
         type: 3}
+      propertyPath: OnCollidedWithPlayer.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1774981398}
+    - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
+        type: 3}
+      propertyPath: OnCollidedWithPlayer.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1774981398}
+    - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
+        type: 3}
       propertyPath: OnCollidedWithPlayer.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
       objectReference: {fileID: 1774981398}
     - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
         type: 3}
+      propertyPath: OnCollidedWithPlayer.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
+        type: 3}
+      propertyPath: OnCollidedWithPlayer.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
+        type: 3}
       propertyPath: OnCollidedWithPlayer.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
+        type: 3}
+      propertyPath: OnCollidedWithPlayer.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: Lose
+      objectReference: {fileID: 0}
+    - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
+        type: 3}
+      propertyPath: OnCollidedWithPlayer.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Lose
       objectReference: {fileID: 0}
     - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
         type: 3}
@@ -4319,8 +4358,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
         type: 3}
+      propertyPath: OnCollidedWithPlayer.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: Horror3D.GameplayController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
+        type: 3}
+      propertyPath: OnCollidedWithPlayer.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: Horror3D.GameplayController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
+        type: 3}
       propertyPath: OnCollidedWithPlayer.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
       value: Horror3D.GameplayController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
+        type: 3}
+      propertyPath: OnCollidedWithPlayer.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
+        type: 3}
+      propertyPath: OnCollidedWithPlayer.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
         type: 3}
@@ -5410,9 +5469,9 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 179406374}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
+        m_TargetAssemblyTypeName: Horror3D.FollowTarget, Assembly-CSharp
+        m_MethodName: Stop
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5422,9 +5481,9 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 476173109}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
+        m_TargetAssemblyTypeName: Horror3D.FollowTarget, Assembly-CSharp
+        m_MethodName: Stop
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6074,7 +6133,17 @@ PrefabInstance:
     - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
         type: 3}
       propertyPath: OnCollidedWithPlayer.m_PersistentCalls.m_Calls.Array.size
-      value: 5
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
+        type: 3}
+      propertyPath: OnCollidedWithPlayer.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
+        type: 3}
+      propertyPath: OnCollidedWithPlayer.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
         type: 3}
@@ -6083,13 +6152,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
         type: 3}
+      propertyPath: OnCollidedWithPlayer.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1774981398}
+    - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
+        type: 3}
+      propertyPath: OnCollidedWithPlayer.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1774981398}
+    - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
+        type: 3}
       propertyPath: OnCollidedWithPlayer.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
       objectReference: {fileID: 1774981398}
     - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
         type: 3}
+      propertyPath: OnCollidedWithPlayer.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
+        type: 3}
+      propertyPath: OnCollidedWithPlayer.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
+        type: 3}
       propertyPath: OnCollidedWithPlayer.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
+        type: 3}
+      propertyPath: OnCollidedWithPlayer.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: Lose
+      objectReference: {fileID: 0}
+    - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
+        type: 3}
+      propertyPath: OnCollidedWithPlayer.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Lose
       objectReference: {fileID: 0}
     - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
         type: 3}
@@ -6098,8 +6197,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
         type: 3}
+      propertyPath: OnCollidedWithPlayer.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: Horror3D.GameplayController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
+        type: 3}
+      propertyPath: OnCollidedWithPlayer.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: Horror3D.GameplayController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
+        type: 3}
       propertyPath: OnCollidedWithPlayer.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
       value: Horror3D.GameplayController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
+        type: 3}
+      propertyPath: OnCollidedWithPlayer.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
+        type: 3}
+      propertyPath: OnCollidedWithPlayer.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5948315527522463324, guid: 7aac3ef8c39a3c84086f3e6ae2eb3c79,
         type: 3}

@@ -57,6 +57,16 @@ namespace Horror3D
                 Debug.Log($"{name} is stop following!");
 
             agent.isStopped = true;
+            agent.velocity = Vector3.zero;
+        }
+
+        public void Stop()
+        {
+            if (!agent.enabled)
+                return;
+
+            Unfollow();
+            agent.enabled = false;
         }
     }
 }
